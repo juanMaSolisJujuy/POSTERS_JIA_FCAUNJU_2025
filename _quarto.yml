@@ -9,7 +9,6 @@ project:
 book:
   title: "Libro de posters de las 10° Jornadas Integradas"
   subtitle: "Facultad de Ciencias Agrarias | Universidad Nacional de Jujuy"
-  search: false
   chapters:
     - index.qmd
     - intro.qmd
