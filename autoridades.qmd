@@ -1,6 +1,8 @@
-# Autoridades FCA
+# AUTORIDADES {.unnumbered}
 
-:::{.authorities style="text-align: center; font-size: 0.9em;"}
+
+
+:::{.authorities style="text-align: left; font-size: 1em;"}
 
 **DECANA**  
 Dra. Noemí del Valle BEJARANO  

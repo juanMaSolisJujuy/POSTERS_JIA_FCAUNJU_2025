@@ -1,7 +1,6 @@
-"Marca temporal","TIPO DE TRABAJO","TÍTULO DEL TRABAJO","AUTORES 
+Marca temporal,TIPO DE TRABAJO,TÍTULO DEL TRABAJO,"AUTORES 
 (Apellido completo e iniciales del nombre. Si se incluye más de un autor, los mismos deben estar separados con punto y coma). 
-Ej: Pérez, J.; García, M.","Correo electrónico del primer autor","RESÚMEN","POSTER
+Ej: Pérez, J.; García, M.",Correo electrónico del primer autor,RESÚMEN,"POSTER
 (Formato de imagen: png, jpg, etc.)"
-"2025/07/01 9:30:00 a. m. GMT-3","Tesis: Especialización, Maestría y Doctorado. Avance y Finalización","Mi trabajo","Perez, J.","juanperez@gmail.com","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Sed euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Sed euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.
-
-Vivamus euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Sed euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Sed euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.","https://drive.google.com/u/2/open?usp=forms_web&id=15AotkI--zj6gLHreziPWWSU3kZPm3Vgr"
+2025/07/01 3:57:47 p. m. GMT-3,Becarios CIN,Cambio climatico en Jujuy,Hurtado R; Alabar F,davidalabar@hotmail.com,Prueba,https://drive.google.com/u/2/open?usp=forms_web&id=1BBtWCoYNfNJnEi548eTX7S4_ypX6Xqdb
+2025/07/01 4:07:47 p. m. GMT-3,Proyectos de Investigación,carnes de llama y mercados de proximidad,"Agustinho, M. A.; Combina, M. I.; Zerpa, D.",aleagustinho@fca.unju.edu.ar,se presentan los resultados del proyecto mincyt.....,https://drive.google.com/u/2/open?usp=forms_web&id=13P4If-4SGp8p--Xt_0VKmuXiHX1cyqVb
