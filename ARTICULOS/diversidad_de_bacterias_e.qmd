@@ -1,0 +1,16 @@
+# Diversidad de bacterias endófitas cultivables asociadas a plantas de arándanos (Vaccinium corymbosum L.) cv. Biloxi con actividades promotoras del crecimiento vegetal 
+
+
+## Autores: 
+Ortiz Galeana M. A.; Hernández Salmerón J. E.; Valenzuela Aragón B.; Villalobos S. S.; Rocha Granado M. del C.; Santoyo G.
+
+
+## Resumen: 
+En el presente trabajo se explora la diversidad de bacterias endófitas cultivables asociadas a plantas de arándano (Vaccinium corymbosum L.) cv. Biloxi, así como la caracterización de sus actividades promotoras del crecimiento vegetal, incluyendo la producción de ácido indolacético (AIA), biofilm, sideróforos y actividad proteolítica. Los endófitos bacterianos fueron aislados de los diferentes tejidos de plantas de arándano, obteniendo una mayor densidad poblacional de bacterias endófitas en raíz, comparado con tallo y hojas. Al amplificar y secuenciar el gen ribosomal 16S de los 92 aislados endófitos, las búsquedas tipo Blast en el National Center for Biotechnology Information (NCBI), así como los análisis filogenéticos, mostraron la identificación de 24 especies bacterianas, distribuidas en
+4 Filos, tales como Bacteroidetes (1,1%), Actinobacterias (23,9%), Firmicutes (12,5%) y Proteobacterias (62,5%). Los géneros más abundantes fueron Pantoea, Pseudomonas, Burkholderia y Bacillus, entre otros. Al analizar algunas actividades promotoras del crecimiento vegetal, el 42% de los aislados endófitos mostraron al menos una actividad promotora del crecimiento vegetal. Interesantemente, algunas cepas de Bacillus y Pantoea mostraron mejor producción de fitohormonas (AIA), biofilm y sideróforos comparado con la rizobacteria Pseudomonas fluorescens UM270, utilizada como control positivo. Estos resultados muestran el posible papel benéfico que tienen los endófitos bacterianos en
+plantas de arándano, así como su potencial para ser empleados como bioinoculantes en otros cultivos de importancia agrícola.
+
+
+
+
+![Póster del trabajo](./IMAGENES/1xtyEtBTZS9EJvjx8LRWDX6jdmNmTY_Fc.png)

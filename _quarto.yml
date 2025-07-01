@@ -9,7 +9,9 @@ book:
   - autoridades.qmd
   - intro.qmd
   - ./ARTICULOS/cambio_climatico_en_jujuy.qmd
-  - ./ARTICULOS/carnes_de_llama_y_mercados_de_proximidad.qmd
+  - ./ARTICULOS/carnes_de_llama_y_mercado.qmd
+  - ./ARTICULOS/diversidad_de_bacterias_e.qmd
+  - ./ARTICULOS/mi_trabajo.qmd.qmd
   page-footer:
     center: FACULTAD DE CIENCIAS AGRARIAS - (Y4600DTA) - Alberdi N° 47 - S. S. de
       Jujuy - Jujuy – Argentina

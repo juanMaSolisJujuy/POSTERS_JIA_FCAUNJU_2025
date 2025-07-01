@@ -60,8 +60,8 @@
     ]
   },
   {
-    "objectID": "ARTICULOS/carnes_de_llama_y_mercados_de_proximidad.html",
-    "href": "ARTICULOS/carnes_de_llama_y_mercados_de_proximidad.html",
+    "objectID": "ARTICULOS/carnes_de_llama_y_mercado.html",
+    "href": "ARTICULOS/carnes_de_llama_y_mercado.html",
     "title": "carnes de llama y mercados de proximidad",
     "section": "",
     "text": "Autores:\nAgustinho, M. A.; Combina, M. I.; Zerpa, D.",
@@ -70,13 +70,53 @@
     ]
   },
   {
-    "objectID": "ARTICULOS/carnes_de_llama_y_mercados_de_proximidad.html#resumen",
-    "href": "ARTICULOS/carnes_de_llama_y_mercados_de_proximidad.html#resumen",
+    "objectID": "ARTICULOS/carnes_de_llama_y_mercado.html#resumen",
+    "href": "ARTICULOS/carnes_de_llama_y_mercado.html#resumen",
     "title": "carnes de llama y mercados de proximidad",
     "section": "Resumen:",
     "text": "Resumen:\nse presentan los resultados del proyecto mincyt…..\n\n\n\nPóster del trabajo",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>carnes de llama y mercados de proximidad</span>"
+    ]
+  },
+  {
+    "objectID": "ARTICULOS/diversidad_de_bacterias_e.html",
+    "href": "ARTICULOS/diversidad_de_bacterias_e.html",
+    "title": "Diversidad de bacterias endófitas cultivables asociadas a plantas de arándanos (Vaccinium corymbosum L.) cv. Biloxi con actividades promotoras del crecimiento vegetal",
+    "section": "",
+    "text": "Autores:\nOrtiz Galeana M. A.; Hernández Salmerón J. E.; Valenzuela Aragón B.; Villalobos S. S.; Rocha Granado M. del C.; Santoyo G.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Diversidad de bacterias endófitas cultivables asociadas a plantas de arándanos (Vaccinium corymbosum L.) cv. Biloxi con actividades promotoras del crecimiento vegetal</span>"
+    ]
+  },
+  {
+    "objectID": "ARTICULOS/diversidad_de_bacterias_e.html#resumen",
+    "href": "ARTICULOS/diversidad_de_bacterias_e.html#resumen",
+    "title": "Diversidad de bacterias endófitas cultivables asociadas a plantas de arándanos (Vaccinium corymbosum L.) cv. Biloxi con actividades promotoras del crecimiento vegetal",
+    "section": "Resumen:",
+    "text": "Resumen:\nEn el presente trabajo se explora la diversidad de bacterias endófitas cultivables asociadas a plantas de arándano (Vaccinium corymbosum L.) cv. Biloxi, así como la caracterización de sus actividades promotoras del crecimiento vegetal, incluyendo la producción de ácido indolacético (AIA), biofilm, sideróforos y actividad proteolítica. Los endófitos bacterianos fueron aislados de los diferentes tejidos de plantas de arándano, obteniendo una mayor densidad poblacional de bacterias endófitas en raíz, comparado con tallo y hojas. Al amplificar y secuenciar el gen ribosomal 16S de los 92 aislados endófitos, las búsquedas tipo Blast en el National Center for Biotechnology Information (NCBI), así como los análisis filogenéticos, mostraron la identificación de 24 especies bacterianas, distribuidas en 4 Filos, tales como Bacteroidetes (1,1%), Actinobacterias (23,9%), Firmicutes (12,5%) y Proteobacterias (62,5%). Los géneros más abundantes fueron Pantoea, Pseudomonas, Burkholderia y Bacillus, entre otros. Al analizar algunas actividades promotoras del crecimiento vegetal, el 42% de los aislados endófitos mostraron al menos una actividad promotora del crecimiento vegetal. Interesantemente, algunas cepas de Bacillus y Pantoea mostraron mejor producción de fitohormonas (AIA), biofilm y sideróforos comparado con la rizobacteria Pseudomonas fluorescens UM270, utilizada como control positivo. Estos resultados muestran el posible papel benéfico que tienen los endófitos bacterianos en plantas de arándano, así como su potencial para ser empleados como bioinoculantes en otros cultivos de importancia agrícola.\n\n\n\nPóster del trabajo",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Diversidad de bacterias endófitas cultivables asociadas a plantas de arándanos (Vaccinium corymbosum L.) cv. Biloxi con actividades promotoras del crecimiento vegetal</span>"
+    ]
+  },
+  {
+    "objectID": "ARTICULOS/mi_trabajo.qmd.html",
+    "href": "ARTICULOS/mi_trabajo.qmd.html",
+    "title": "Mi trabajo",
+    "section": "",
+    "text": "Autores:\nPerez, J.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mi trabajo</span>"
+    ]
+  },
+  {
+    "objectID": "ARTICULOS/mi_trabajo.qmd.html#resumen",
+    "href": "ARTICULOS/mi_trabajo.qmd.html#resumen",
+    "title": "Mi trabajo",
+    "section": "Resumen:",
+    "text": "Resumen:\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Sed euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Sed euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.\nVivamus euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Sed euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Sed euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.\n\n\n\nPóster del trabajo",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mi trabajo</span>"
     ]
   }
 ]

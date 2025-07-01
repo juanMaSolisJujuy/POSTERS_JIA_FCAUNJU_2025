@@ -25,7 +25,7 @@ drive_auth()
 gs4_auth()
 # Obtener IDs de archivos (ejemplo: columna "Imagen" con URLs)
 urls_imagenes <- datos$Poster_url
-ids_imagenes = datos$ID
+
 ruta = "C:/Users/usuario/Documents/JUAN/BYDE/2025/COMISIÓN JORNADAS INTEGRADAS 2025/POSTERS_JIA_FCAUNJU_2025/ARTICULOS/IMAGENES/"
 for (url in urls_imagenes) {
   file_id = drive_get(as_id(url))$id
@@ -50,7 +50,8 @@ imagenes = file.path(
 
 for (i in 1:nrow(datos)){
   contenido = datos[i,]
-  imagen = imagenes[i]
+  imagen = contenido[["Poster_url"]]|>
+    str_extract("(?<=id=)[^&]*")
   contenido_qmd = c(
     paste0("# ", contenido$Titulo),
     "\n",
@@ -61,7 +62,7 @@ for (i in 1:nrow(datos)){
     "\n",
     paste0(
       "![Póster del trabajo](",
-      imagen,")"
+      imagenes[grepl(imagen,imagenes)],")"
     )
   )
   nombre_archivo = str_to_lower(contenido$Titulo) |>
@@ -72,14 +73,17 @@ for (i in 1:nrow(datos)){
   writeLines(contenido_qmd, 
              file.path(
                ruta2, 
-               nombre_archivo))
+               nombre_archivo|>
+                 substr(start = 1,stop = 25)|>
+                 paste0(".qmd")))
   
 }
 
 
 # 4. Actualizar _quarto.yml
 ruta3 = "./ARTICULOS"
-actualizar_configuracion <- function(archivos) {
+archivos = list.files(ruta3,pattern = "qmd")
+actualizar_configuracion <- function() {
   # Leer configuración actual
   config <- yaml::read_yaml("_quarto.yml")
   
@@ -88,7 +92,7 @@ actualizar_configuracion <- function(archivos) {
   
   # Añadir nuevos archivos (sin duplicados)
   nuevos_archivos <- setdiff(
-    file.path(ruta3,nombre_archivo),
+    file.path(ruta3,archivos),
     paginas_actuales
   )
   
@@ -98,8 +102,6 @@ actualizar_configuracion <- function(archivos) {
   }
 }
 
-actualizar_configuracion(
-  file.path(ruta3,nombre_archivo)
-)
+actualizar_configuracion()
 
 
