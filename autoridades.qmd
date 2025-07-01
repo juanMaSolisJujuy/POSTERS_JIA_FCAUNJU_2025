@@ -1,0 +1,32 @@
+# Autoridades FCA
+
+:::{.authorities style="text-align: center; font-size: 0.9em;"}
+
+**DECANA**  
+Dra. Noemí del Valle BEJARANO  
+*decana@fca.unju.edu.ar*  
+
+**VICEDECANA**  
+Dra. Raquel Ángela ROMEO  
+*vicedecana@fca.unju.edu.ar*  
+
+**SECRETARIA ACADÉMICA**  
+Mg. Ing. Agr. Susana Edit ALVAREZ  
+*academica@fca.unju.edu.ar*  
+
+**SECRETARIA DE EXTENSIÓN Y DIFUSIÓN**  
+Ing. Agr. Graciela Elisa SIMÓN  
+*sefca@fca.unju.edu.ar*  
+
+**SECRETARIO ADMINISTRATIVO**  
+Ing. Agr. Rodolfo AGUADO  
+*administracion@fca.unju.edu.ar*  
+
+**SECRETARIA DE CIENCIA Y TÉCNICA Y POSGRADO**  
+Dra. Claudia Beatriz GALLARDO  
+*cytfca@fca.unju.edu.ar*  
+
+**COMISIÓN ORGANIZADORA**
+(completar)
+
+:::

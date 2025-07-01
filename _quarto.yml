@@ -1,45 +1,39 @@
 project:
   type: book
   output-dir: docs
-
-# project:
-#      type: website
-#      output-dir: docs
-
 book:
-  title: "Libro de posters de las 10° Jornadas Integradas"
-  subtitle: "Facultad de Ciencias Agrarias | Universidad Nacional de Jujuy"
+  title: Libro de posters de las 10° Jornadas Integradas
+  subtitle: Facultad de Ciencias Agrarias | Universidad Nacional de Jujuy
   chapters:
-    - index.qmd
-    - intro.qmd
-  page-footer: 
-    center: FACULTAD DE CIENCIAS AGRARIAS - (Y4600DTA) - Alberdi N° 47 - S. S. de Jujuy - Jujuy – Argentina 
+  - index.qmd
+  - autoridades.qmd
+  - intro.qmd
+  - ./ARTICULOS/mi_trabajo.qmd
+  page-footer:
+    center: FACULTAD DE CIENCIAS AGRARIAS - (Y4600DTA) - Alberdi N° 47 - S. S. de
+      Jujuy - Jujuy – Argentina
     right: |
       ![](logofca.png){ width=80px }
       ![](logounju.png){ width=80px }
     left: Año 2025
-    
 bibliography: references.bib
-
 lang: es
-
 format:
   html:
     embed-resources: true
     standalone: true
-    theme: 
-      light: [litera]
-      dark: [superhero]
+    theme:
+      light: litera
+      dark: superhero
     toc-title: En esta página
-    code-summary: "<span style='color: darkcyan; border: 2px solid darkcyan; border-radius: 8px; padding: 4px;'>Mostrar código</span>"
-    code-fold: false
+    code-summary: '<span style=''color: darkcyan; border: 2px solid darkcyan; border-radius:
+      8px; padding: 4px;''>Mostrar código</span>'
+    code-fold: true
     code-overflow: wrap
-    code-tools: 
+    code-tools:
       source: false
       toggle: true
     fontsize: 0.9em
   pdf:
     documentclass: scrreprt
-
 editor: source
-

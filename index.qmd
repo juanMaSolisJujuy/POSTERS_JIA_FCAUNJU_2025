@@ -1,8 +1,11 @@
 ```{r out.width="100%",fig.align='center', echo=FALSE}
 knitr::include_graphics("logows.jpg")
 ```
+
 ##### {.unnumbered}
 
 <p style="text-align: center"><i>Aquí va el lema</i></p>
+
+
 
 
