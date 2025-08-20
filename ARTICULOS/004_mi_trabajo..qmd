@@ -1,8 +1,8 @@
-# Mi trabajo
+## Perez, J.
 
 
-## Autores: 
-Perez, J.
+## Título: 
+Mi trabajo
 
 
 ## Resumen: 
@@ -13,4 +13,4 @@ Vivamus euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ult
 
 
 
-![Póster del trabajo](./IMAGENES/15AotkI--zj6gLHreziPWWSU3kZPm3Vgr.png)
+[Póster del trabajo](https://drive.google.com/u/2/open?usp=forms_web&id=15AotkI--zj6gLHreziPWWSU3kZPm3Vgr)

@@ -1,8 +1,8 @@
-# Diversidad de bacterias endófitas cultivables asociadas a plantas de arándanos (Vaccinium corymbosum L.) cv. Biloxi con actividades promotoras del crecimiento vegetal 
+## Ortiz Galeana M. A.; Hernández Salmerón J. E.; Valenzuela Aragón B.; Villalobos S. S.; Rocha Granado M. del C.; Santoyo G.
 
 
-## Autores: 
-Ortiz Galeana M. A.; Hernández Salmerón J. E.; Valenzuela Aragón B.; Villalobos S. S.; Rocha Granado M. del C.; Santoyo G.
+## Título: 
+Diversidad de bacterias endófitas cultivables asociadas a plantas de arándanos (Vaccinium corymbosum L.) cv. Biloxi con actividades promotoras del crecimiento vegetal 
 
 
 ## Resumen: 
@@ -13,4 +13,4 @@ plantas de arándano, así como su potencial para ser empleados como bioinoculan
 
 
 
-![Póster del trabajo](./IMAGENES/1xtyEtBTZS9EJvjx8LRWDX6jdmNmTY_Fc.png)
+[Póster del trabajo](https://drive.google.com/u/2/open?usp=forms_web&id=1xtyEtBTZS9EJvjx8LRWDX6jdmNmTY_Fc)

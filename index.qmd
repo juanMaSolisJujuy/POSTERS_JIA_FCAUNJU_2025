@@ -2,10 +2,4 @@
 knitr::include_graphics("logows.jpg")
 ```
 
-##### {.unnumbered}
-
-<p style="text-align: center"><i>Aquí va el lema</i></p>
-
-
-
-
+### *Enseñar para transformar. Descubrir para innovar. Compartir para construir comunidad.* {.unnumbered style="text-align: center;"}

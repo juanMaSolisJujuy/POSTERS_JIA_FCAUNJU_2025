@@ -19,62 +19,70 @@ names(datos)= c("ID",
                       "Mail",
                       "Resumen",
                       "Poster_url")
-
+datos = datos |> arrange(Autores)
 ##### DESCARGO IMAGENES A MI UNIDAD ######
-drive_auth()
-gs4_auth()
-# Obtener IDs de archivos (ejemplo: columna "Imagen" con URLs)
-urls_imagenes <- datos$Poster_url
-
-ruta = "C:/Users/usuario/Documents/JUAN/BYDE/2025/COMISIÓN JORNADAS INTEGRADAS 2025/POSTERS_JIA_FCAUNJU_2025/ARTICULOS/IMAGENES/"
-for (url in urls_imagenes) {
-  file_id = drive_get(as_id(url))$id
-  drive_download(as_id(file_id), 
-                 path = paste0(ruta, file_id, ".png"))
-}
+# drive_auth()
+# gs4_auth()
+# # Obtener IDs de archivos (ejemplo: columna "Imagen" con URLs)
+# urls_imagenes <- datos$Poster_url
+# 
+# ruta = "C:/Users/usuario/Documents/JUAN/BYDE/2025/COMISIÓN JORNADAS INTEGRADAS 2025/POSTERS_JIA_FCAUNJU_2025/ARTICULOS/IMAGENES/"
+# for (url in urls_imagenes) {
+#   file_id = drive_get(as_id(url))$id
+#   drive_download(as_id(file_id), 
+#                  path = paste0(ruta, file_id, ".png"))
+# }
 
 #################################
 
 #### importación de imagenes #####
-
-ruta = "C:/Users/usuario/Documents/JUAN/BYDE/2025/COMISIÓN JORNADAS INTEGRADAS 2025/POSTERS_JIA_FCAUNJU_2025/ARTICULOS/IMAGENES"
-imagenes = list.files(
-  ruta
-)
-rutared = "./IMAGENES"
-imagenes = file.path(
-  rutared,imagenes
-)
+# 
+# ruta = "C:/Users/usuario/Documents/JUAN/BYDE/2025/COMISIÓN JORNADAS INTEGRADAS 2025/POSTERS_JIA_FCAUNJU_2025/ARTICULOS/IMAGENES"
+# imagenes = list.files(
+#   ruta
+# )
+# rutared = "./IMAGENES"
+# imagenes = file.path(
+#   rutared,imagenes
+# )
 
 # 2. Función para crear archivos QMD
 
 for (i in 1:nrow(datos)){
   contenido = datos[i,]
-  imagen = contenido[["Poster_url"]]|>
-    str_extract("(?<=id=)[^&]*")
   contenido_qmd = c(
-    paste0("# ", contenido$Titulo),
+    paste0("## ",contenido$Autores), 
     "\n",
-    "## Autores: ", contenido$Autores,
+    "## Título: ", contenido$Titulo,
     "\n",
     "## Resumen: ", contenido$Resumen,
     "\n",
     "\n",
+    # paste0(
+    #   "![Póster del trabajo](",
+    #   imagenes[grepl(imagen,imagenes)],")"
+    # )
     paste0(
-      "![Póster del trabajo](",
-      imagenes[grepl(imagen,imagenes)],")"
+      "[Póster del trabajo](",
+      contenido$Poster_url,
+      ")"
     )
   )
-  nombre_archivo = str_to_lower(contenido$Titulo) |>
+  id = case_when(
+    i<10 ~ "00",
+    between(i,10,99) ~ "0",
+    TRUE ~ ""
+  )
+  nombre_archivo = paste0(id,i,"_", str_to_lower(contenido$Titulo) |>
     str_remove_all("[^a-z0-9 ]") |>
     str_replace_all(" ", "_") |>
-    str_c(".qmd")
+    str_c(".qmd"))
   ruta2 = "C:/Users/usuario/Documents/JUAN/BYDE/2025/COMISIÓN JORNADAS INTEGRADAS 2025/POSTERS_JIA_FCAUNJU_2025/ARTICULOS"
   writeLines(contenido_qmd, 
              file.path(
                ruta2, 
                nombre_archivo|>
-                 substr(start = 1,stop = 25)|>
+                 substr(start = 1,stop = 15)|>
                  paste0(".qmd")))
   
 }

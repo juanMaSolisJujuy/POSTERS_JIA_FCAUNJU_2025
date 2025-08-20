@@ -8,10 +8,10 @@ book:
   - index.qmd
   - autoridades.qmd
   - intro.qmd
-  - ./ARTICULOS/cambio_climatico_en_jujuy.qmd
-  - ./ARTICULOS/carnes_de_llama_y_mercado.qmd
-  - ./ARTICULOS/diversidad_de_bacterias_e.qmd
-  - ./ARTICULOS/mi_trabajo.qmd.qmd
+  - ./ARTICULOS/001_carnes_de_l.qmd
+  - ./ARTICULOS/002_cambio_clim.qmd
+  - ./ARTICULOS/003_diversidad_.qmd
+  - ./ARTICULOS/004_mi_trabajo..qmd
   page-footer:
     center: FACULTAD DE CIENCIAS AGRARIAS - (Y4600DTA) - Alberdi N° 47 - S. S. de
       Jujuy - Jujuy – Argentina
@@ -29,13 +29,6 @@ format:
       light: litera
       dark: superhero
     toc-title: En esta página
-    code-summary: '<span style=''color: darkcyan; border: 2px solid darkcyan; border-radius:
-      8px; padding: 4px;''>Mostrar código</span>'
-    code-fold: true
-    code-overflow: wrap
-    code-tools:
-      source: false
-      toggle: true
     fontsize: 0.9em
   pdf:
     documentclass: scrreprt
