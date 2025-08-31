@@ -8,7 +8,7 @@ datos = rio::import("./FORMULARIO/PRUEBA2.xlsx") |>
   filter(
     grepl("EGRESADO",CATEGORÍA)
   ) |>
-  rename("AUTORES" = 4, "TITULO"=3, "ENLACE"=6)
+  rename("AUTORES" = 4, "TITULO"=3, "ENLACE"=6, "CORREO" = 5)
 
 if (nrow(datos) == 0){
   cat("No hay trabajos para mostrar")
@@ -18,6 +18,7 @@ if (nrow(datos) == 0){
   nombre_autor = datos$AUTORES[i]  # Ajustar nombre de columna
   nombre_proyecto = datos$TITULO[i]  # Ajustar nombre de columna
   enlace_poster = datos$ENLACE[i]  # Ajustar nombre de columna
+  correo = datos$CORREO[i]
   
   # Generar markdown para esta entrada
   if (!is.na(nombre_autor)) {
@@ -25,6 +26,7 @@ if (nrow(datos) == 0){
     
     if (!is.na(nombre_autor) && nombre_autor != "") {
       cat("\n<center>", nombre_autor, "</center>", sep = "")
+      cat("\n<center>", correo, "</center>", sep = "")
     }
     
     if (enlace_poster != "No disponible") {
