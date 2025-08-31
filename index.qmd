@@ -2,4 +2,10 @@
 knitr::include_graphics("logows.jpg")
 ```
 
-### *Enseñar para transformar. Descubrir para innovar. Compartir para construir comunidad.* {.unnumbered style="text-align: center;"}
+# *Lema* {.unnumbered style="font-size: 15px;"}
+
+::: {style="background-color: #e5e5e5; padding: 10px; text-align: center; font-size: 15px; font-weight: bold; font-family: inherit; border: solid lightgray 3px;  border-width: 6px;"}
+<span style="color: #1a4d3a;">Enseñar para transformar.</span> 
+<span style="color: #ffd700;">Descubrir para innovar.</span> 
+<span style="color: #ff6b35;">Compartir para construir comunidad.</span>
+:::

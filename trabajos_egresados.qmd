@@ -1,0 +1,40 @@
+# Egresados
+
+<div style="background: linear-gradient(to right, rgba(26, 77, 58, 0.8), rgba(26, 77, 58, 0.2)); padding: 15px; font-size: 14px;border-radius: 18px; font-family: inherit;">
+
+```{r echo=FALSE, message=FALSE, warning=FALSE,results='asis'}
+library(tidyverse)
+datos = rio::import("./FORMULARIO/PRUEBA2.xlsx") |>
+  filter(
+    grepl("EGRESADO",CATEGORÍA)
+  ) |>
+  rename("AUTORES" = 4, "TITULO"=3, "ENLACE"=6)
+
+if (nrow(datos) == 0){
+  cat("No hay trabajos para mostrar")
+} else {
+  for (i in 1:nrow(datos)) {
+  
+  nombre_autor = datos$AUTORES[i]  # Ajustar nombre de columna
+  nombre_proyecto = datos$TITULO[i]  # Ajustar nombre de columna
+  enlace_poster = datos$ENLACE[i]  # Ajustar nombre de columna
+  
+  # Generar markdown para esta entrada
+  if (!is.na(nombre_autor)) {
+    cat("- **", nombre_proyecto, "**", sep = "\n")
+    
+    if (!is.na(nombre_autor) && nombre_autor != "") {
+      cat("\n<center>", nombre_autor, "</center>", sep = "")
+    }
+    
+    if (enlace_poster != "No disponible") {
+      cat("\n<center>[Ver póster](", enlace_poster, "){target=\"_blank\"}", "</center>", sep = "")
+    }
+    cat("\n\n")
+  } 
+}
+
+}
+
+```
+</div>

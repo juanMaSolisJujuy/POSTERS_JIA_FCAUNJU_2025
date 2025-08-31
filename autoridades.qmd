@@ -1,34 +1,60 @@
 # Autoridades {.unnumbered}
 
-
-
-:::{.authorities style="text-align: left; font-size: 1em;"}
+<div style="background: linear-gradient(to right, rgba(173, 255, 47, 0.8), rgba(173, 255, 47, 0.2)); padding: 15px; font-size: 11px;border-radius: 18px; font-family: inherit;">
 
 **DECANA**  
 Dra. Noemí del Valle BEJARANO  
-*decana@fca.unju.edu.ar*  
+*decana@fca.unju.edu.ar*
 
 **VICEDECANA**  
-Dra. Raquel Ángela ROMEO  
+Dra. Raquel Ángela ROMEO   
 *vicedecana@fca.unju.edu.ar*  
 
 **SECRETARIA ACADÉMICA**  
 Mg. Ing. Agr. Susana Edit ALVAREZ  
-*academica@fca.unju.edu.ar*  
+*academica@fca.unju.edu.ar*
 
 **SECRETARIA DE EXTENSIÓN Y DIFUSIÓN**  
 Ing. Agr. Graciela Elisa SIMÓN  
-*sefca@fca.unju.edu.ar*  
+*sefca@fca.unju.edu.ar*
 
 **SECRETARIO ADMINISTRATIVO**  
 Ing. Agr. Rodolfo AGUADO  
-*administracion@fca.unju.edu.ar*  
+*administracion@fca.unju.edu.ar* 
 
 **SECRETARIA DE CIENCIA Y TÉCNICA Y POSGRADO**  
 Dra. Claudia Beatriz GALLARDO  
-*cytfca@fca.unju.edu.ar*  
+*cytfca@fca.unju.edu.ar*
 
-**COMISIÓN ORGANIZADORA**
-(completar)
-
-:::
+**COMISIÓN ORGANIZADORA**  
+Ing. Agr. Graciela E. Simón  
+Dra. Ing. Agr. Claudia B. Gallardo  
+DG. Marina Schimpf  
+Dra. Lic. Rosa Milagro Retamoso  
+Dra. Lic. Cs. Biol. Cecilia Gabriela Giulianotti  
+Dra. Lic. Cs. Biol. Marcela De Paul  
+Dr. Ing. Agr. Fabio David Alabar  
+Esp. Ing. Agr. Mónica Beatriz Valdiviezo Corte  
+Lic. Brom. Indira Macarena López  
+Ing. Agr. Nancy Fabiana Sivila  
+Ing. Agr. Marta Celia Leaño  
+Ing. Agr. Javier Bautista  
+Dra. Ing. Agr. Gabriela Silvia Fernández  
+Mg. Ing. Agr. Laura Graciela Diez Yarade  
+Ing. Agr. Diego Gómez Borus  
+Dra. María Inés Zamar  
+M. Sc. Trad. Publ. Prof. Liliana Beatriz C. Chávez  
+M. Sc. María Alejandra Agustinho  
+Ing. Agr. Juan Manuel Solis  
+Ing. Qco. Sergio Madregal  
+Lis. Sist. Alberto Carlos Urzagaste Cuba  
+Srta. Carolina Llampa  
+Ing. Ezequiel Molina  
+APU David Gallardo  
+Sr. Marcelo Mesconi  
+Sr. Marcos Sapag  
+Sr. Javier Méndez  
+Srta. Emilce De Vega  
+Srta. Claudia Guerra  
+</div>
+ 

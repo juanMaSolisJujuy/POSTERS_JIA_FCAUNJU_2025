@@ -8,10 +8,9 @@ book:
   - index.qmd
   - autoridades.qmd
   - intro.qmd
-  - ./ARTICULOS/001_carnes_de_l.qmd
-  - ./ARTICULOS/002_cambio_clim.qmd
-  - ./ARTICULOS/003_diversidad_.qmd
-  - ./ARTICULOS/004_mi_trabajo..qmd
+  - trabajos_estudiantes.qmd
+  - trabajos_docentes.qmd
+  - trabajos_egresados.qmd
   page-footer:
     center: FACULTAD DE CIENCIAS AGRARIAS - (Y4600DTA) - Alberdi N° 47 - S. S. de
       Jujuy - Jujuy – Argentina
@@ -25,9 +24,7 @@ format:
   html:
     embed-resources: true
     standalone: true
-    theme:
-      light: litera
-      dark: superhero
+    respect-user-color-scheme: true
     toc-title: En esta página
     fontsize: 0.9em
   pdf:
