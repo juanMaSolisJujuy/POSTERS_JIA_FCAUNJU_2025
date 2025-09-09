@@ -1,0 +1,17 @@
+.sidebar-logo {
+  width: 50% !important;
+  height: auto !important;
+  max-width: 150px; /* Ajusta según tus necesidades */
+  display: block !important;
+  margin: 0 auto !important;
+  order: 2 !important;
+  border-radius: 8px !important;
+}
+
+h1 {
+  font-size: 20px !important;
+}
+
+h2 {
+  font-size: 16px !important;
+}

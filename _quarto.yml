@@ -2,15 +2,13 @@ project:
   type: book
   output-dir: docs
 book:
-  title: Libro de pósteres de las 10° Jornadas Integradas
+  title: Compendio de pósteres de las 10° Jornadas Integradas, Año 2025
   subtitle: Facultad de Ciencias Agrarias | Universidad Nacional de Jujuy
   chapters:
   - index.qmd
   - autoridades.qmd
   - intro.qmd
-  - trabajos_estudiantes.qmd
-  - trabajos_docentes.qmd
-  - trabajos_egresados.qmd
+  - martes_16.qmd
   page-footer:
     center: FACULTAD DE CIENCIAS AGRARIAS - (Y4600DTA) - Alberdi N° 47 - S. S. de
       Jujuy - Jujuy – Argentina
@@ -18,15 +16,24 @@ book:
       ![](logofca.png){ width=80px }
       ![](logounju.png){ width=80px }
     left: Año 2025
+  sidebar: 
+    logo: integracion.gif
+  downloads: [pdf]
 bibliography: references.bib
 lang: es
 format:
   html:
+    resources:
+      - fondo.png
     embed-resources: true
-    standalone: true
     respect-user-color-scheme: true
+    toc: true
+    toc-location: right
+    toc-depth: 2
     toc-title: En esta página
     fontsize: 0.9em
+    css: estilos.css
   pdf:
     documentclass: scrreprt
+    keep-tex: true
 editor: source
