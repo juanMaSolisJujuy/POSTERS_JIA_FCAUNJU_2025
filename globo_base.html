@@ -1,0 +1,84 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Globo 3D con Ubicación</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    #globeContainer {
+      width: 300px;
+      height: 300px; /* podés ajustar la altura si no querés pantalla completa */
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="globeContainer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three"></script>
+  <script src="https://cdn.jsdelivr.net/npm/globe.gl"></script>
+
+  <script>
+    // Inicializar el globo
+    const container = document.getElementById('globeContainer');
+    const globe = Globe()
+      .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+      .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+      .showAtmosphere(true)
+      .atmosphereColor('rgba(100, 150, 200, 0.5)')
+      .atmosphereAltitude(0.2)
+      (container);
+
+    // Forzar tamaño inicial
+    globe.width(container.offsetWidth)
+         .height(container.offsetHeight);
+
+    // Redimensionar al cambiar ventana
+    window.addEventListener('resize', () => {
+      globe.width(container.offsetWidth)
+           .height(container.offsetHeight);
+    });
+
+    // Función para obtener ubicación del usuario
+    function obtenerUbicacion() {
+      if (!navigator.geolocation) return;
+
+      navigator.geolocation.getCurrentPosition(
+        function(position) {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+
+          globe.pointsData([{
+            lat: lat,
+            lng: lng,
+            size: 0.5,
+            color: 'red',
+            altitude: 0.1
+          }]);
+
+          globe.pointAltitude('altitude');
+          globe.pointRadius('size');
+          globe.pointColor('color');
+
+          // Centrar en la ubicación
+          globe.pointOfView({ lat: lat, lng: lng, altitude: 2.5 }, 1000);
+        },
+        function(error) {
+          console.log("Error obteniendo ubicación: ", error);
+        }
+      );
+    }
+
+    // Obtener ubicación al cargar
+    window.onload = obtenerUbicacion;
+  </script>
+</body>
+</html>

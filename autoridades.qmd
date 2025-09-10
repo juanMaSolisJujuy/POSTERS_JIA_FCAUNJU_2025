@@ -1,6 +1,6 @@
 # Autoridades {.unnumbered}
 
-<div style="background: linear-gradient(to right, rgba(180, 213, 120, 0.8), rgba(180, 213, 120, 0.2)), url(fondo.png); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 15px; font-size: 12px; border-radius: 18px; font-family: inherit; margin-bottom: 20px;">
+<div style="background: linear-gradient(to right, rgba(180, 213, 120, 1), rgba(180, 213, 120, 0.45)), url(fondo.png); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 15px; font-size: 12px; border-radius: 18px; font-family: inherit; margin-bottom: 20px;">
 
 **DECANA**  
 Dra. Noemí del Valle BEJARANO  

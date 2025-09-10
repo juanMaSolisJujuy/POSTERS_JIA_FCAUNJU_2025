@@ -1,6 +1,7 @@
 
 # *Portada* {.unnumbered style="color: lightgray;"}
 
+
 ```{r out.width="100%",fig.align='center', echo=FALSE}
 knitr::include_graphics("logows.jpg")
 ```
@@ -30,4 +31,3 @@ Compartir para construir comunidad.
 </span>
 </p>
 </div>
-

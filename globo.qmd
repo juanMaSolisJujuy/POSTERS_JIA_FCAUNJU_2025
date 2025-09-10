@@ -1,0 +1,7 @@
+
+# Globo
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="150%", out.height="400px", fig.align="center"}
+htmltools::includeHTML("globo_base.html")
+
+```
