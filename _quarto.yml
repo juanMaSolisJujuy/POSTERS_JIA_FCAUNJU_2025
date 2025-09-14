@@ -13,7 +13,7 @@ book:
   - miercoles_17.qmd
   - jueves_18.qmd
   - martes_23.qmd
-  - fca.qmd
+  #- fca.qmd
   page-footer:
     center: FACULTAD DE CIENCIAS AGRARIAS - (Y4600DTA) - Alberdi N° 47 - S. S. de
       Jujuy - Jujuy – Argentina
