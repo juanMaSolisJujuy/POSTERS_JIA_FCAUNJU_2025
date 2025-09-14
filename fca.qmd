@@ -1,0 +1,146 @@
+
+# Facultad de Ciencias Agrarias {.unnumbered}
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+# Cargar librerías necesarias
+library(leaflet)
+library(dplyr)
+
+# Crear el dataset con toda la información
+carreras_data <- data.frame(
+  Tipo_Carrera = c("Grado", "Grado", "Grado", "Grado", "Grado", "Grado", "Grado", 
+                   "Pre-Grado", "Pre-Grado", "Pre-Grado", "Pre-Grado","-"),
+  Nombre_Carrera = c("Ingeniería Agronómica", "Ingeniería Agronómica", 
+                     "Licenciatura en Cs. Biológicas", 
+                     "Licenciatura en Bromatología", 
+                     "Licenciatura en Desarrollo Rural", 
+                     "Licenciatura en Desarrollo Rural", 
+                     "Licenciatura en Gestión Ambiental",
+                     "Tecnicatura Universitaria en Transformación de la Producción Agropecuaria",
+                     "Tecnicatura Universitaria en Producción de Animales de Granja",
+                     "Tecnicatura Universitaria Forestal", 
+                     "Tecnicatura Universitaria en mecanización Agrícola",
+                     "-"),
+  Duracion = c(5, "5(hasta 3° en SP)", 5, 3, 5, 5, 5, 2.5, 2.5, 2.5, 2.5,"-"),
+  Sede = c("San Salvador de Jujuy", "San Pedro de Jujuy", "San Salvador de Jujuy", 
+           "San Salvador de Jujuy", "Humahuaca", "Abra Pampa", "Humahuaca",
+           "Tilcara", "Monterrico", "San Pedro de Jujuy", "Perico","La Quiaca"),
+  Domicilio = c("Alberdi N° 47 - San Salvador de Jujuy, Jujuy",
+                "Gdor Tello N° 207 - San Pedro de Jujuy, Jujuy",
+                "Alberdi N° 47 - San Salvador de Jujuy, Jujuy",
+                "Alberdi N° 47 - San Salvador de Jujuy, Jujuy",
+                "Buenos Aires N° 630 - Humahuaca, Jujuy",
+                "Av. Libertador, entre la calle Felipe Schachner y Manuel Alberdi. Barrio 23 de agosto - Abra Pampa, Jujuy",
+                "Buenos Aires N° 630 - Humahuaca, Jujuy",
+                "Calle Belgrano 366 (Hotel de turismo) - Tilcara - Jujuy",
+                "Av. Crucero Gral. Belgrano esq. Av. 25 de Mayo, B° San Antonio",
+                "Gdor Tello N° 207 - San Pedro de Jujuy, Jujuy",
+                "Los Ceibos esq Los Paraisos. Barrio Santo Domingo",
+                "Cabildo s/n ex predio del ferrocarril. entre Avda. la Madrid y Avda. Sarmiento - La Quiaca"),
+  Longitud = c(-65.2943430637021, 
+               -64.86782260602804, 
+               -65.2943430637021, 
+               -65.2943430637021, 
+               -65.3487916214241, 
+               -65.6916986633211, 
+               -65.3487916214241, 
+               -65.39626210606146, 
+               -65.16920663344294,
+               -64.86782260602804, 
+               -65.14338274766239,
+               -65.595322682209),
+  Latitud = c(-24.18817108805203,
+              -24.2294758876403, 
+              -24.18817108805203,
+              -24.18817108805203,
+              -23.206420402757836,
+              -22.727194746188864, 
+              -23.206420402757836, 
+              -23.576076579595686, 
+              -24.44259691363178, 
+              -24.2294758876403, 
+              -24.387091699810547,
+              -22.107681204668033 )
+)
+
+# Agrupar datos por ubicación única para crear los popups
+ubicaciones_unicas <- carreras_data %>%
+  group_by(Sede, Longitud, Latitud) %>%
+  summarise(
+    carreras_pregrado = list(carreras_data[carreras_data$Sede == first(Sede) & 
+                                          carreras_data$Tipo_Carrera == "Pre-Grado", ]),
+    carreras_grado = list(carreras_data[carreras_data$Sede == first(Sede) & 
+                                       carreras_data$Tipo_Carrera == "Grado", ]),
+    .groups = 'drop'
+  )
+
+# Función para crear el contenido HTML del popup
+crear_popup <- function(sede, carreras_pregrado, carreras_grado) {
+  html_content <- paste0("<h4><b>", sede, "</b></h4>")
+  
+  # Agregar carreras de Pre-Grado si existen
+  if (nrow(carreras_pregrado) > 0) {
+    html_content <- paste0(html_content, "<h5><b>Carreras de Pre-Grado</b></h5><ul>")
+    for (i in 1:nrow(carreras_pregrado)) {
+      html_content <- paste0(html_content, 
+                            "<li><b>", carreras_pregrado$Nombre_Carrera[i], "</b><br>",
+                            "Duración: ", carreras_pregrado$Duracion[i], " años<br>",
+                            "Domicilio: ", carreras_pregrado$Domicilio[i], "</li>")
+    }
+    html_content <- paste0(html_content, "</ul>")
+  }
+  
+  # Agregar carreras de Grado si existen
+  if (nrow(carreras_grado) > 0) {
+    html_content <- paste0(html_content, "<h5><b>Carreras de Grado</b></h5><ul>")
+    for (i in 1:nrow(carreras_grado)) {
+      html_content <- paste0(html_content,
+                            "<li><b>", carreras_grado$Nombre_Carrera[i], "</b><br>",
+                            "Duración: ", carreras_grado$Duracion[i], " años<br>",
+                            "Domicilio: ", carreras_grado$Domicilio[i], "</li>")
+    }
+    html_content <- paste0(html_content, "</ul>")
+  }
+  
+  return(html_content)
+}
+
+# Crear los popups para cada ubicación
+popups <- character(nrow(ubicaciones_unicas))
+for (i in 1:nrow(ubicaciones_unicas)) {
+  popups[i] <- crear_popup(
+    ubicaciones_unicas$Sede[i],
+    ubicaciones_unicas$carreras_pregrado[[i]],
+    ubicaciones_unicas$carreras_grado[[i]]
+  )
+}
+
+# Crear icono personalizado
+icono_personalizado <- makeIcon(
+  iconUrl = "logofca2.png",  # Ruta a tu imagen (puede ser .png, .jpg, .svg, etc.)
+  iconWidth = 40,        # Ancho del icono en píxeles
+  iconHeight = 40,       # Alto del icono en píxeles
+  iconAnchorX = 20,      # Punto de anclaje X (generalmente la mitad del ancho)
+  iconAnchorY = 40,      # Punto de anclaje Y (generalmente la altura completa para que apunte hacia abajo)
+  popupAnchorX = 0,      # Desplazamiento X del popup respecto al icono
+  popupAnchorY = -40     # Desplazamiento Y del popup respecto al icono (negativo para que aparezca arriba)
+)
+
+# Crear el mapa leaflet
+mapa <- leaflet(ubicaciones_unicas) %>%
+   addProviderTiles(providers$Stadia.StamenToner) %>%
+  addMarkers(
+    lng = ~Longitud,
+    lat = ~Latitud,
+    popup = popups,
+    icon = icono_personalizado,  # Usar el icono personalizado
+    popupOptions = popupOptions(maxWidth = 400, closeButton = TRUE)
+  ) %>%
+  setView(lng = -65.2, lat = -23.5, zoom = 8)
+
+# Mostrar el mapa
+mapa
+
+```
