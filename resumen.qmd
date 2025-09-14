@@ -19,7 +19,7 @@ En conjunto, estos pósteres ilustran cómo la **Facultad de Ciencias Agrarias d
 library(magick)
 
 # Leer la imagen
-img = image_read("nubepalabras.png")
+img = image_read("nubepalabras2.png")
 
 # Agregar borde negro con esquinas redondeadas
 img_with_border = image_border(img, "black", "10x10")
