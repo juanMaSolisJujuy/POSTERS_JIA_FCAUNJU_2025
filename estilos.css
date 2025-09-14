@@ -15,3 +15,29 @@ h1 {
 h2 {
   font-size: 16px !important;
 }
+
+/* Estilo general de callouts */
+.callout-note .callout-body {
+  background-color: white;
+}
+
+.callout-note.verde .callout-header {
+  background-color: rgba(154, 205, 50, 0.3); /* Verde suave */
+  border-left: 6px solid rgba(154, 205, 50, 1);
+}
+.callout-note.verdeoscuro .callout-header {
+  background-color: rgba(34, 139, 34, 0.3);
+  border-left: 6px solid rgba(34, 139, 34, 1);
+}
+
+.callout-note.amarillo .callout-header {
+  background-color: rgba(255, 207, 9, 0.3);
+  border-left: 6px solid rgba(255, 207, 9, 1);
+}
+
+.callout-note.rojo .callout-header {
+  background-color: rgba(255, 99, 71, 0.3);
+  border-left: 6px solid rgba(255, 99, 71, 1);
+}
+
+

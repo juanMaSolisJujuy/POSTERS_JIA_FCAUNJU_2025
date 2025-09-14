@@ -1,4 +1,4 @@
-# JUEVES 18
+# Jueves 18
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE,results='asis'}
@@ -9,10 +9,18 @@ crono = rio::import("./FORMULARIO/CRONO.xlsx") |>
 datos = rio::import("./FORMULARIO/DATOS.xlsx") |>
   rename("AUTORES" = 4, "TITULO"=3, "ENLACE"=6, "CORREO" = 5) |>
   merge(crono, all.x = TRUE) |>
-  filter(N == 3)
+  filter(N == 3)|>
+  group_by(TITULO)|>
+  slice_tail(n = 1)
 
+ 
 if (nrow(datos) == 0){
+  # Abrir div para el contenido
+            cat('<div style="background: linear-gradient(to right, rgba(255, 207, 9, 1), rgba(255, 207, 9, 0.45)), url(fondo.png); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 15px; font-size: 12px; border-radius: 18px; font-family: inherit; margin-bottom: 20px;">')
   cat("No hay trabajos para mostrar")
+         
+      # Cerrar div
+      cat("</div>")
 } else {
   for (i in 1:nrow(datos)) {
     nombre_autor = datos$AUTORES[i]
@@ -21,24 +29,24 @@ if (nrow(datos) == 0){
     correo = datos$CORREO[i]
     
     if (!is.na(nombre_autor)) {
-      # Abrir div para el contenido
-            cat('<div style="background: linear-gradient(to right, rgba(154, 205, 50, 1), rgba(154, 205, 50, 0.45)), url(fondo.png); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 15px; font-size: 12px; border-radius: 18px; font-family: inherit; margin-bottom: 20px;">')
-      
+      cat('<div style="background: linear-gradient(to right, rgba(255, 207, 9, 1), rgba(255, 207, 9, 0.45)), url(fondo.png); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 15px; font-size: 12px; border-radius: 18px; font-family: inherit; margin-bottom: 20px;">')
       # Generar encabezado fuera del div
       cat(paste0("## ", nombre_proyecto))
       
       if (!is.na(nombre_autor) && nombre_autor != "") {
+        cat("\n<center><b>Categoría: </b>", categoria, "</center>", sep = "")
         cat("\n<center>", nombre_autor, "</center>", sep = "")
-        cat("\n<center>", correo, "</center>", sep = "")
+        cat("\n<center>","___" ,"</center>", sep = "")
+        cat("\n<center><i>", correo, "</i></center>", sep = "")
       }
       
       if (enlace_poster != "No disponible") {
         cat("\n<center>[Ver póster](", enlace_poster, "){target=\"_blank\"}</center>", sep = "")
       }
-      
-      # Cerrar div
-      cat("</div>")
     } 
+     # Cerrar div
+      cat("</div>")
   }
 }
+     
 ```
