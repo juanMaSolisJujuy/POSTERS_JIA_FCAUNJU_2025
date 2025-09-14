@@ -130,7 +130,7 @@ icono_personalizado <- makeIcon(
 
 # Crear el mapa leaflet
 mapa <- leaflet(ubicaciones_unicas) %>%
-   addProviderTiles(providers$Stadia.OSMBright) %>%
+   addTiles() %>%
   addMarkers(
     lng = ~Longitud,
     lat = ~Latitud,
