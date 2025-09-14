@@ -27,6 +27,8 @@ if (nrow(datos) == 0){
     nombre_proyecto = datos$TITULO[i]
     enlace_poster = datos$ENLACE[i]
     correo = datos$CORREO[i]
+    categoria = datos$`CATEGORÍA
+(En caso de varias categorías, seleccionar la del primer autor)`[i]
     
     if (!is.na(nombre_autor)) {
       cat('<div style="background: linear-gradient(to right, rgba(255, 207, 9, 1), rgba(255, 207, 9, 0.45)), url(fondo.png); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 15px; font-size: 12px; border-radius: 18px; font-family: inherit; margin-bottom: 20px;">')

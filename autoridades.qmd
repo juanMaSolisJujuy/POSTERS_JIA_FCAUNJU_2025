@@ -57,4 +57,13 @@ Sr. Javier Méndez
 Srta. Emilce De Vega  
 Srta. Claudia Guerra  
 </div>
+
+---
+
+::: {.callout-note icon=false}
+## Consultas sobre la página de pósteres
+
+- *Departamento de Matemática y Computación de la FCA UNJu:* dpto.matematicaycomputacion@fca.unju.edu.ar / juanmasolis@fca.unju.edu.ar
+
+:::
  

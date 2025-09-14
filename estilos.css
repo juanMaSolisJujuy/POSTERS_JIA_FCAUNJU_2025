@@ -41,3 +41,21 @@ h2 {
 }
 
 
+.custom-audio-player {
+  display: flex;
+  align-items: center;
+}
+
+#playButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333; /* Color del icono */
+  /* Usa un icono de una libraría como Font Awesome si lo prefieres */
+}
+
+/* Ocultar los controles nativos si usas tu propio diseño */
+#myAudio {
+  display: none;
+}
