@@ -1,27 +1,30 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
+  spanish,
   letterpaper,
   DIV=11,
   numbers=noendperiod]{scrreprt}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -39,9 +42,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
 \ifx\paragraph\undefined\else
@@ -67,8 +67,7 @@
 \makeatother
 
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -93,6 +92,28 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
 
 \KOMAoption{captions}{tableheading}
 \makeatletter
@@ -155,20 +176,9 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-
-\ifLuaTeX
-\usepackage[bidi=basic]{babel}
-\else
-\usepackage[bidi=default]{babel}
-\fi
-\babelprovide[main,import]{spanish}
-% get rid of language-specific shorthands (see #6817):
-\let\LanguageShortHands\languageshorthands
-\def\languageshorthands#1{}
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Compendio de pósteres de las 10° Jornadas Integradas, Año 2025},
   pdflang={es},
@@ -191,7 +201,6 @@
 de Jujuy}
 \author{}
 \date{}
-
 \begin{document}
 \maketitle
 
@@ -283,7 +292,7 @@ Srta. Claudia Guerra
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, titlerule=0mm, left=2mm, opacitybacktitle=0.6, toprule=.15mm, bottomrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, title={Por consultas y comentarios sobre la página de pósteres}, rightrule=.15mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, breakable, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, titlerule=0mm, title={Por consultas y comentarios sobre la página de pósteres}, coltitle=black, colframe=quarto-callout-note-color-frame, opacityback=0, bottomtitle=1mm, opacitybacktitle=0.6, toprule=.15mm, leftrule=.75mm]
 
 dpto.matematicaycomputacion@fca.unju.edu.ar \textbar{}
 juanmasolis@fca.unju.edu.ar \textbar{}
@@ -342,7 +351,7 @@ Una publicación compartida por UNJuTV ((\textbf{unjutv?}))
 
 \chapter{Cronograma}\label{cronograma}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, titlerule=0mm, left=2mm, opacitybacktitle=0.6, toprule=.15mm, bottomrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, title={Martes 16}, rightrule=.15mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, breakable, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, titlerule=0mm, title={Martes 16}, coltitle=black, colframe=quarto-callout-note-color-frame, opacityback=0, bottomtitle=1mm, opacitybacktitle=0.6, toprule=.15mm, leftrule=.75mm]
 
 \begin{itemize}
 \item
@@ -370,7 +379,7 @@ Una publicación compartida por UNJuTV ((\textbf{unjutv?}))
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, titlerule=0mm, left=2mm, opacitybacktitle=0.6, toprule=.15mm, bottomrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, title={Miércoles 17}, rightrule=.15mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, breakable, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, titlerule=0mm, title={Miércoles 17}, coltitle=black, colframe=quarto-callout-note-color-frame, opacityback=0, bottomtitle=1mm, opacitybacktitle=0.6, toprule=.15mm, leftrule=.75mm]
 
 \begin{itemize}
 \item
@@ -399,7 +408,7 @@ Una publicación compartida por UNJuTV ((\textbf{unjutv?}))
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, titlerule=0mm, left=2mm, opacitybacktitle=0.6, toprule=.15mm, bottomrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, title={Jueves 18}, rightrule=.15mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, breakable, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, titlerule=0mm, title={Jueves 18}, coltitle=black, colframe=quarto-callout-note-color-frame, opacityback=0, bottomtitle=1mm, opacitybacktitle=0.6, toprule=.15mm, leftrule=.75mm]
 
 \begin{itemize}
 \item
@@ -432,7 +441,7 @@ Una publicación compartida por UNJuTV ((\textbf{unjutv?}))
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, titlerule=0mm, left=2mm, opacitybacktitle=0.6, toprule=.15mm, bottomrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, title={Martes 23}, rightrule=.15mm, opacityback=0, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, breakable, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, titlerule=0mm, title={Martes 23}, coltitle=black, colframe=quarto-callout-note-color-frame, opacityback=0, bottomtitle=1mm, opacitybacktitle=0.6, toprule=.15mm, leftrule=.75mm]
 
 \begin{itemize}
 \item
@@ -556,17 +565,17 @@ póster}
 EXTRACTOS VEGETALES CON CAPACIDAD BIOENRAIZANTE, BIOFERTILIZANTE Y
 BIOPROTECTORA}\label{promociuxf3n-de-pruxe1cticas-sustentables-en-sistemas-hortuxedcolas-extractos-vegetales-con-capacidad-bioenraizante-biofertilizante-y-bioprotectora}
 
-Categoría: ESTUDIANTES (pasantía de trabajo final, tesina, horas de
-campo, práctica profesional, proyecto de investigación)
+Categoría: DOCENTES (diplomaturas, avances/finalización de carreras de
+posgrado y proyectos de investigación)
 
-Flores, K.M.A.; López Mamani, J.M.; Ramos. A. J.; Castillo, A.V. ; Cruz,
-G.S. y G .del C. Soto
+Flores, K.M.A.; López Mamani, J.M.; Ramos. A. J.; Castillo, A.V.; Cruz,
+G.S. y Soto, G .del C.
 
 \_\_\_
 
-gracielasoto@fca.unju.edu.ar
+Ayelenflores606@gmail.com
 
-\href{https://drive.google.com/open?id=1iUtQhbpTJi5SuY8vyt8DxgBoflY6U3y8}{Ver
+\href{https://drive.google.com/open?id=1oijHVPpVQo6iicFIkyvhzOO7ZGD1Auuc}{Ver
 póster}
 
 \section{USO DE ASERRÍN Y COMPOST COMO SUSTRATOS ALTERNATIVOS EN LA
@@ -798,6 +807,41 @@ póster}
 \bookmarksetup{startatroot}
 
 \chapter{Martes 23}\label{martes-23-1}
+
+\section{ESPOROFITOS DE DOS ESPECIES DEL COMPLEJO ASPLENIUM SERRA
+(ASPLENIACEAE) DE LAS YUNGAS ARGENTINAS, MEDIANTE LA APLICACION DE
+TECNICAS DE LABORATORIO
+CONVENCIONALES.}\label{esporofitos-de-dos-especies-del-complejo-asplenium-serra-aspleniaceae-de-las-yungas-argentinas-mediante-la-aplicacion-de-tecnicas-de-laboratorio-convencionales.}
+
+Categoría: ESTUDIANTES (pasantía de trabajo final, tesina, horas de
+campo, práctica profesional, proyecto de investigación)
+
+Prats, F. M.; Ganem, M. A.
+
+\_\_\_
+
+florenciamprats@gmail.com
+
+\href{https://drive.google.com/open?id=11IEyQTkmK9ypRRcDWYAk66J7COlsmUZ7}{Ver
+póster}
+
+\section{FACTORES QUE INCIDEN EN LA DESERCIÓN Y REPROBACIÓN DE LOS
+ESTUDIANTES EN LA MATERIA DE ÁLGEBRA Y GEOMETRÍA ANALÍTICA EN LA
+FACULTAD DE CIENCIAS
+AGRARIAS.}\label{factores-que-inciden-en-la-deserciuxf3n-y-reprobaciuxf3n-de-los-estudiantes-en-la-materia-de-uxe1lgebra-y-geometruxeda-analuxedtica-en-la-facultad-de-ciencias-agrarias.}
+
+Categoría: DOCENTES (diplomaturas, avances/finalización de carreras de
+posgrado y proyectos de investigación)
+
+López, I.; Guanuco A.; Saravia, I.; Bautista, J.; Aguado, R. Calizaya,
+B.; Cruz, A.
+
+\_\_\_
+
+indiramacarenalopez@fca.unju.edu.ar
+
+\href{https://drive.google.com/open?id=1SmJTqJQYZryQRvrIvD8VJCQtV5otNWAn}{Ver
+póster}
 
 \section{HERRAMIENTAS PARA LA GESTIÓN SUSTENTABLE DEL ARBOLADO URBANO -
 METÁN,
