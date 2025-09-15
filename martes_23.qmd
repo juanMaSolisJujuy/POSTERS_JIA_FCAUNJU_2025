@@ -35,7 +35,7 @@ if (nrow(datos) == 0){
             cat('<div style="background: linear-gradient(to right, rgba(255, 87, 51, 1), rgba(255, 87, 51, 0.45)), url(fondo.png); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 15px; font-size: 12px; border-radius: 18px; font-family: inherit; margin-bottom: 20px;">')
       
       # Generar encabezado fuera del div
-      cat(paste0("## ", nombre_proyecto))
+      cat(paste0("\n\n## ", nombre_proyecto, "\n\n"))
       
       if (!is.na(nombre_autor) && nombre_autor != "") {
         cat("\n<center><b>Categoría: </b>", categoria, "</center>", sep = "")
