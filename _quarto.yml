@@ -10,8 +10,8 @@ book:
   - intro.qmd
   - cronograma.qmd
   - martes_16.qmd
-  - miercoles_17.qmd
   - jueves_18.qmd
+  - miercoles_17.qmd
   - martes_23.qmd
   - resumen.qmd
   #- fca.qmd
