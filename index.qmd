@@ -31,3 +31,5 @@ Compartir para construir comunidad.
 </span>
 </p>
 </div>
+
+[ir al cronograma](cronograma.qmd)
